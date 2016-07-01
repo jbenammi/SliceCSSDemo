@@ -1,0 +1,187 @@
+	<div class="row space-top-10">
+		<div class="col l2 offset-l2 m2 offset-m2 s2 offset-s2">
+		<h4>Navigation Bar BackLog</h4>
+		<ul>
+			<li>disable links</li>
+			<li>dropdown menus</li>
+			<li>RWD navigation links</li>
+		</ul>
+		</div>
+		<div class="col l8 m8 s8">
+		<h2 class="shadow-text plum-text center-text">Navigation Bar</h2>
+		<p>Navigation bar code can be placed at the top of your html page before the main body of your code. the &lt;nav&gt; can have the color modified by using one of the color classes. the logo text and link text can have their colors modified by using the "color"-text class.</p>
+		<div class="space-top-10"></div>
+			<nav class="blueberry darker-3">
+				<p class="logo salt-text">Logo Text</p>
+				<ul class="right">
+					<li><a href="">Link 1</a></li>
+					<li><a href="">Link 2</a></li>
+					<li><a href="" class="lemon-text">Link 3</a></li>
+				</ul>
+			</nav>
+<div class="space-top-10"></div>
+<pre><code class="html">&lt;nav class="blueberry darker-3"&gt;
+	&lt;p class="logo"&gt;Logo Text&lt;/p&gt;
+	&lt;ul class="right"&gt;
+		&lt;li&gt;&lt;a href=""&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=""&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="" class="lemon-text"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col l2 offset-l2 m2 offset-m2 s2 offset-s2">
+		<h4>Modal BackLog</h4>
+		<ul>
+			<li>onLoad functionality</li>
+		</ul>
+		</div>
+		<div class="col l8 m8 s8">
+		<h2 class="shadow-text plum-text center-text">Modal</h2>
+		<p>Slice modals can be a very versitile element to add to any application. The below two examples show how the modal can be customized for a simple message display or for use as form submission.</p>
+		<p>Every modal is customizable in width by applying a row to the modal-wraper &lt;div&gt; and a col class to the child modal &lt;div&gt;</p>
+		<p>The modal itself is purely CSS based, however the trigger for the modal utilizes a simple javascript function to load and close the modal element. This makes the modal possible to use with many different front-end frameworks</p>
+		<div class="space-top-10"></div>
+		<button class="kiwi darker-3 center salt-text" onclick="modal('firstModal1', 'firstModal2')">Message Modal</button> 	<button class="kiwi darker-3 center salt-text" onclick="modal('secondModal_1', 'secondModal_2')">Form Modal</button>
+		<div class="space-top-10"></div>
+
+		<h4>Message Modal html</h4>
+<pre><code>&lt;div id="firstModal1" class="modal-wrapper row"&gt;
+	&lt;div id="firstModal2" class="modal blueberry lighter-5 col l3"&gt;
+		&lt;div&gt;
+			&lt;p class="salt-text"&gt;Put something in here&lt;/p&gt;
+			&lt;button class="modal-closebtn" onclick="modalClose('firstModal1')"&gt;Close&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+		<div class="space-top-10"></div>
+		<h4>Form Modal html</h4>
+<pre><code>&lt;div id="secondModal_1" class="modal-wrapper row"&gt;
+	&lt;div id="secondModal_2" class="modal salt lighter-5 col l6 m8 s12"&gt;
+		&lt;div class="row"&gt;
+			&lt;form action="" method="" class="col l8 m8 s16"&gt;
+				&lt;h3&gt;Register&lt;/h3&gt;
+				&lt;label&gt;First Name&lt;/label&gt;
+				&lt;input type="text" name="fName" /&gt;
+				&lt;label&gt;Last Name&lt;/label&gt;
+				&lt;input type="text" name="lName" /&gt;
+				&lt;label&gt;Last Name&lt;/label&gt;
+				&lt;input type="text" name="lName" /&gt;
+				&lt;label&gt;E-Mail&lt;/label&gt;
+				&lt;input type="email" name="email" /&gt;
+				&lt;label&gt;Password&lt;/label&gt;
+				&lt;input type="password" name="password" /&gt;
+				&lt;label&gt;Confirm Password&lt;/label&gt;
+				&lt;input type="password" name="confirmPass" /&gt;
+				&lt;div class="space-top-10"&gt;
+					&lt;button class="plum salt-text right" type="submit" onclick="modalClose('secondModal_1')"&gt;Register&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+			&lt;form action="" method="" class="col l8 m8 s16"&gt;
+				&lt;h3&gt;Login&lt;/h3&gt;
+				&lt;label&gt;E-Mail&lt;/label&gt;
+				&lt;input type="email" name="email" /&gt;
+				&lt;label&gt;Password&lt;/label&gt;
+				&lt;input type="password" name="password" /&gt;
+				&lt;div class="space-top-10"&gt;
+					&lt;button class="plum salt-text right" type="submit" onclick="modalClose('secondModal_1')"&gt;Login&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+		&lt;/div&gt;
+			&lt;button class="modal-closebtn" onclick="modalClose('secondModal_1')"&gt;Close&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+		<div class="space-top-10"></div>
+		<h4>Modal js</h4>
+<pre><code>&lt;script type="text/javascript"&gt;
+	var modal = function(id1, id2){
+		document.getElementById(id1).style.display='block';
+		document.getElementById(id2).style.float='none';
+	}
+	var modalClose = function(id1){
+		document.getElementById(id1).style.display='none';
+	}
+&lt;/script&gt;
+</code></pre>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col l2 offset-l2 m2 offset-m2 s2 offset-s2">
+		<h4>Button BackLog</h4>
+		<ul>
+			<li>onHover current color lighten</li>
+			<li>onClick animations</li>
+			<li>dark vs. light text fill based on bg color</li>
+			<li>various button sizing</li>
+			<li>float buttons</li>
+		</ul>
+		</div>
+		<div class="col l8 m8 s8">
+		<h2 class="shadow-text plum-text center-text">Buttons</h2>
+		<p>Slice buttons are currenty customizable by background color and text color. Additional functionality will become available with future releases</p>
+		<p>Like with normal button functionality, Slice buttons can be used for links, forms, and onClick event handling.</p>
+		<div class="space-top-10"></div>
+		<button class="blueberry darker-3 salt-text" onclick="">onClick</button> <a href=""><button class="blueberry darker-3 salt-text">&lt;a&gt; tag</button></a>
+		<div class="space-top-10"></div>
+		</div>
+	</div>
+
+
+
+<div id="firstModal1" class="modal-wrapper row">
+	<div id="firstModal2" class="modal blueberry lighter-5 col l3">
+		<div>
+			<h3 class="lemon-text">Title</h3>
+			<p class="salt-text">Your message here</p>
+			<button class="modal-closebtn" onclick="modalClose('firstModal1')">Close</button>
+		</div>
+	</div>
+</div>
+
+<div id="secondModal_1" class="modal-wrapper row">
+	<div id="secondModal_2" class="modal salt lighter-5 col l6 m8 s12">
+		<div class="row">
+			<form action="" method="" class="col l8 m8 s16">
+				<h3>Register</h3>
+				<label>First Name</label>
+				<input type="text" name="fName" />
+				<label>Last Name</label>
+				<input type="text" name="lName" />
+				<label>Last Name</label>
+				<input type="text" name="lName" />
+				<label>E-Mail</label>
+				<input type="email" name="email" />
+				<label>Password</label>
+				<input type="password" name="password" />
+				<label>Confirm Password</label>
+				<input type="password" name="confirmPass" />
+				<div class="space-top-10">
+					<button class="plum salt-text right" type="submit" onclick="modalClose('secondModal_1')">Register</button>
+				</div>
+			</form>
+			<form action="" method="" class="col l8 m8 s16">
+				<h3>Login</h3>
+				<label>E-Mail</label>
+				<input type="email" name="email" />
+				<label>Password</label>
+				<input type="password" name="password" />
+				<div class="space-top-10">
+					<button class="plum salt-text right" type="submit" onclick="modalClose('secondModal_1')">Login</button>
+				</div>
+			</form>
+		</div>
+			<button class="modal-closebtn" onclick="modalClose('secondModal_1')">Close</button>
+		</div>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $('pre code').each(function(i, block) {
+	    hljs.highlightBlock(block);
+	  });
+	});
+</script>

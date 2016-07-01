@@ -1,0 +1,17 @@
+{
+  "name": "sclicecss",
+  "version": "1.0.0",
+  "description": "css framework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jonathan Ben-Ammi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "highlight.js": "^9.5.0",
+    "slicecss": "^1.0.0"
+  }
+}
