@@ -5,6 +5,6 @@ path = require('path');
 app.use(express.static(path.join(__dirname, '/client')));
 
 
-app.listen(5555, function(){
-	console.log('Now running on port 5555');
+app.listen(8000, function(){
+	console.log('Now running on port 8000');
 })
