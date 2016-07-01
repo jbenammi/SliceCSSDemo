@@ -82,6 +82,8 @@ div.h100, nav.h100 {
   height: 100px; }
 div.h150, nav.h150 {
   height: 150px; }
+div.h200, nav.h200 {
+  height: 200px; }  
 
 /* Justification */
 .right {
@@ -115,6 +117,11 @@ div {
   box-sizing: border-box; }
 
 @media only screen and (max-width: 420px) {
+    div.container {
+    width: 85%;
+    margin: 0 auto;
+    height: 89%; }
+
   .row {
     margin: 0 auto 10px auto; }
     .row .col {
@@ -186,6 +193,11 @@ div {
       .row .col.offset-s16 {
         width: 100%; } }
 @media only screen and (min-width: 421px) and (max-width: 995px) {
+    div.container {
+    width: 90%;
+    margin: 0 auto;
+    height: 89%; }
+
   .row {
     margin: 0 auto 10px auto; }
     .row .col {
